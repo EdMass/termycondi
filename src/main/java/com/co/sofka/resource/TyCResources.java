@@ -51,6 +51,14 @@ public class TyCResources {
         return tyCServices.getLastVersion().map(tyc -> Response.ok(tyc).build());
     }
 
+    @GET
+    @Path("/buscar/{version}")
+    @Produces(APPLICATION_JSON)
+    public Uni<Response> findVersion(@PathParam("version") Integer version){
+        var uni = tyCServices.findVersion(version);
+        return tyCServices.findVersion(version).map(tyc -> Response.ok(tyc).build());
+    }
+
     @POST
     @Path("/aceptar")
     @Produces(APPLICATION_JSON)
@@ -67,4 +75,6 @@ public class TyCResources {
             return Uni.createFrom().item(Response.status(NOT_ACCEPTABLE).build());
         }
     }
+
+
 }
