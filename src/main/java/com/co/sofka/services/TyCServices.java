@@ -15,7 +15,8 @@ public class TyCServices {
     TyCRepository repository;
 
     public Uni<Object> getLastVersion(){
-        return repository.findAll().list().map(ver -> ver.get(ver.size()-1).getTexto());
+        var uni = repository.findAll().list().map(ver -> ver.get(ver.size()-1));
+        return repository.findAll().list().map(ver -> ver.get(ver.size()-1));
     }
 
     public Uni<TyCEntity> addTyC(TyCEntity tyCEntity){
