@@ -28,7 +28,8 @@ public class TyCServices {
     }
 
     public Uni<TyCEntity> findVersion(Integer version){
-        return repository.find("version", version).firstResult();
+        return repository.
+                find("version", version).firstResult();
     }
 
 }

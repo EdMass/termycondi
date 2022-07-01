@@ -36,14 +36,16 @@ public class TyCResources {
     @Path("/todos")
     @Produces(APPLICATION_JSON)
     public Uni<Response> getAllTyC(){
-        return tyCServices.getAllTyC().map(tyc -> Response.ok(tyc).build());
+        return tyCServices.getAllTyC().map(
+                tyc -> Response.ok(tyc).build());
     }
 
     @GET
     @Path("/ultimo")
     @Produces(APPLICATION_JSON)
     public Uni<Response> getLastTyC(){
-        return tyCServices.getLastVersion().map(tyc -> Response.ok(tyc).build());
+        return tyCServices.getLastVersion().map(
+                tyc -> Response.ok(tyc).build());
     }
 
     @GET

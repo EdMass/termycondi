@@ -54,8 +54,8 @@ public class AcepTyCServices {
         throw new IllegalArgumentException();
     }
 
-    @Fallback(fallbackMethod = "createFallbackMethod")
-    @Retry(maxRetries = 4)
+    //@Fallback(fallbackMethod = "createFallbackMethod")
+    //@Retry(maxRetries = 4)
     public Uni<Response> createAceptTyC(@NotNull AcepTyCDto acepTyCDto){
         String TIPO_CEDULA = "Cedula";
         String TIPO_PASSPORT = "Passport";

@@ -18,7 +18,7 @@ import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 @Path("/terms")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class AcepTyCResourse {
+public class AcepTyCResource {
 
     @Inject
     AcepTyCServices acepTyCServices;
